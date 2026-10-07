@@ -31,9 +31,26 @@ export function JovickTableWaterWebsite() {
     setMenuOpen(false);
   };
 
-  const submit = (event: FormEvent<HTMLFormElement>) => {
+  const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setSent(true);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    setSent(false);
+
+    try {
+      const response = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (!response.ok) throw new Error("Form submission failed");
+      setSent(true);
+      form.reset();
+    } catch {
+      setSent(false);
+      window.alert("Sorry, your enquiry could not be submitted. Please try again.");
+    }
   };
 
   return (
@@ -179,14 +196,16 @@ export function JovickTableWaterWebsite() {
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5"><p className="text-xs font-bold uppercase tracking-widest text-slate-400">Parent brand</p><p className="mt-2 font-bold">JOVICK UNIQUE</p><p className="mt-1 text-sm text-slate-400">JOVICK UNIQUE INTEGRATED VENTURES LIMITED</p></div>
               </div>
             </div>
-            <form onSubmit={submit} className="rounded-[2rem] bg-white p-7 text-slate-950 shadow-2xl sm:p-9">
+            <form name="jovick-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={submit} className="rounded-[2rem] bg-white p-7 text-slate-950 shadow-2xl sm:p-9">
+              <input type="hidden" name="form-name" value="jovick-enquiry" />
+              <div className="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></div>
               <h3 className="text-2xl font-black">Send an enquiry</h3>
-              <p className="mt-2 text-sm text-slate-500">{sent ? "Thank you. Your enquiry is ready for the next contact-channel integration." : "We will connect this form to your preferred contact channel next."}</p>
+              <p className="mt-2 text-sm text-slate-500">{sent ? "Thank you. Your enquiry has been submitted successfully. We will get back to you soon." : "Send your order or enquiry directly to Jovick Table Water."}</p>
               <div className="mt-7 space-y-4">
-                <input required className="w-full rounded-xl border border-slate-200 px-4 py-3.5 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10" placeholder="Your name" aria-label="Your name" />
-                <input required className="w-full rounded-xl border border-slate-200 px-4 py-3.5 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10" placeholder="Phone or WhatsApp number" aria-label="Phone or WhatsApp number" />
-                <textarea required rows={4} className="w-full resize-none rounded-xl border border-slate-200 px-4 py-3.5 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10" placeholder="What would you like to order or discuss?" aria-label="Message" />
-                <button className="w-full rounded-xl bg-blue-600 px-5 py-4 font-bold text-white transition hover:bg-blue-700">{sent ? "Enquiry Received" : "Submit Enquiry"}</button>
+                <input required className="w-full rounded-xl border border-slate-200 px-4 py-3.5 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10" name="name" autoComplete="name" placeholder="Your name" aria-label="Your name" />
+                <input required className="w-full rounded-xl border border-slate-200 px-4 py-3.5 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10" name="phone" autoComplete="tel" inputMode="tel" placeholder="Phone or WhatsApp number" aria-label="Phone or WhatsApp number" />
+                <textarea required rows={4} className="w-full resize-none rounded-xl border border-slate-200 px-4 py-3.5 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10" name="message" placeholder="What would you like to order or discuss?" aria-label="Message" />
+                <button type="submit" className="w-full rounded-xl bg-blue-600 px-5 py-4 font-bold text-white transition hover:bg-blue-700">{sent ? "Enquiry Received" : "Submit Enquiry"}</button>
               </div>
             </form>
           </div>
