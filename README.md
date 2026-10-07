@@ -32,6 +32,10 @@ npm run build
 npm run preview
 ```
 
+## Deployment
+
+Deployed through Netlify from the GitHub `main` branch.
+
 ## Important
 
 Business phone numbers, email addresses, regulatory claims, certifications, treatment methods, pack sizes, pricing, and production details should be added only after they are verified.
