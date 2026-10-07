@@ -192,8 +192,51 @@ export function JovickTableWaterWebsite() {
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Ready to order or partner with Jovick?</h2>
               <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">Use this section for direct customer orders, distributor enquiries, event supply and business partnerships.</p>
               <div className="mt-9 space-y-4">
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-5"><p className="text-xs font-bold uppercase tracking-widest text-slate-400">Business</p><p className="mt-2 font-bold">Jovick Table Water</p></div>
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-5"><p className="text-xs font-bold uppercase tracking-widest text-slate-400">Parent brand</p><p className="mt-2 font-bold">JOVICK UNIQUE</p><p className="mt-1 text-sm text-slate-400">JOVICK UNIQUE INTEGRATED VENTURES LIMITED</p></div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Business</p>
+                  <p className="mt-2 font-bold">Jovick Table Water</p>
+                  <p className="mt-1 text-sm text-slate-400">Part of the JOVICK UNIQUE brand.</p>
+                </div>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <a href="tel:+2348137297150" className="rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-blue-400/50 hover:bg-white/10">
+                    <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Call</p>
+                    <p className="mt-2 font-bold text-white">+234 813 729 7150</p>
+                    <p className="mt-1 text-sm text-slate-400">Speak with us directly</p>
+                  </a>
+                  <a href="https://wa.me/2348137297150?text=Hello%20Jovick%20Table%20Water%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-blue-400/50 hover:bg-white/10">
+                    <p className="text-xs font-bold uppercase tracking-widest text-slate-400">WhatsApp</p>
+                    <p className="mt-2 font-bold text-white">+234 813 729 7150</p>
+                    <p className="mt-1 text-sm text-slate-400">Message us instantly</p>
+                  </a>
+                  <a href="tel:09158848356" className="rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-blue-400/50 hover:bg-white/10">
+                    <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Phone</p>
+                    <p className="mt-2 font-bold text-white">09158848356</p>
+                    <p className="mt-1 text-sm text-slate-400">Alternative contact line</p>
+                  </a>
+                  <a href="mailto:jovickuniqueenterprises@gmail.com" className="rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-blue-400/50 hover:bg-white/10">
+                    <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Email</p>
+                    <p className="mt-2 break-all font-bold text-white">jovickuniqueenterprises@gmail.com</p>
+                    <p className="mt-1 text-sm text-slate-400">Send us an email</p>
+                  </a>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Back%20Of%20Tipper%20Garage%20Agwandodo%20Gwagwalada%20Abuja%20Nigeria" target="_blank" rel="noreferrer" className="block rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-blue-400/50 hover:bg-white/10">
+                  <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Location</p>
+                  <p className="mt-2 font-bold text-white">Back Of Tipper Garage, Agwandodo, Gwagwalada, Abuja</p>
+                  <p className="mt-1 text-sm text-blue-300">Open in Google Maps →</p>
+                </a>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Follow JOVICK UNIQUE</p>
+                  <div className="mt-3 flex flex-wrap gap-3">
+                    <a href="https://www.instagram.com/jovickunique?stkn=MWR4ZzNzMmRwMjVsbA%3D%3D&utm_source=qr" target="_blank" rel="noreferrer" className="rounded-full border border-white/10 px-4 py-2 text-sm font-bold text-white transition hover:border-blue-400/50 hover:text-blue-300">Instagram</a>
+                    <a href="https://www.facebook.com/share/1DapEbakaS/?mibextid=wwXIfr" target="_blank" rel="noreferrer" className="rounded-full border border-white/10 px-4 py-2 text-sm font-bold text-white transition hover:border-blue-400/50 hover:text-blue-300">Facebook</a>
+                    <a href="https://www.tiktok.com/@jovickunique?_r=1&_t=ZS-9AMcyYyaM5J" target="_blank" rel="noreferrer" className="rounded-full border border-white/10 px-4 py-2 text-sm font-bold text-white transition hover:border-blue-400/50 hover:text-blue-300">TikTok</a>
+                  </div>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Parent brand</p>
+                  <p className="mt-2 font-bold">JOVICK UNIQUE</p>
+                  <p className="mt-1 text-sm text-slate-400">JOVICK UNIQUE INTEGRATED VENTURES LIMITED</p>
+                </div>
               </div>
             </div>
             <form name="jovick-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={submit} className="rounded-[2rem] bg-white p-7 text-slate-950 shadow-2xl sm:p-9">
@@ -213,7 +256,28 @@ export function JovickTableWaterWebsite() {
       </main>
 
       <footer className="bg-slate-950 px-5 pb-8 text-slate-400 sm:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 border-t border-white/10 pt-8 text-sm sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto grid max-w-7xl gap-8 border-t border-white/10 pt-10 md:grid-cols-3">
+          <div>
+            <p className="text-lg font-extrabold text-white">JOVICK</p>
+            <p className="mt-1 text-xs font-bold uppercase tracking-[0.28em] text-blue-400">Table Water</p>
+            <p className="mt-4 max-w-sm text-sm leading-6">Clean, refreshing drinking water prepared with care for homes, businesses, events and everyday life.</p>
+          </div>
+          <div>
+            <p className="text-sm font-bold text-white">Quick Links</p>
+            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+              {navItems.map(([label, id]) => <button key={id} onClick={() => scrollTo(id)} className="transition hover:text-blue-400">{label}</button>)}
+            </div>
+          </div>
+          <div>
+            <p className="text-sm font-bold text-white">Reach Us</p>
+            <div className="mt-3 space-y-2 text-sm">
+              <a href="tel:+2348137297150" className="block transition hover:text-blue-400">+234 813 729 7150</a>
+              <a href="mailto:jovickuniqueenterprises@gmail.com" className="block transition hover:text-blue-400">jovickuniqueenterprises@gmail.com</a>
+              <p>Gwagwalada, Abuja, Nigeria</p>
+            </div>
+          </div>
+        </div>
+        <div className="mx-auto mt-8 flex max-w-7xl flex-col gap-2 border-t border-white/10 pt-6 text-xs sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 Jovick Table Water. All rights reserved.</p>
           <p>Part of the JOVICK UNIQUE brand.</p>
         </div>
