@@ -1,3 +1,5 @@
+import { JovickTableWaterWebsite } from "./components/generated/JovickTableWaterWebsite";
+
 export default function App() {
-  return <main>Jovick Table Water</main>;
+  return <JovickTableWaterWebsite />;
 }
