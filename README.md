@@ -1,41 +1,27 @@
 # Jovick Table Water
 
-Professional responsive website for **Jovick Table Water**, part of the JOVICK UNIQUE brand.
+A responsive static website for Jovick Table Water, built with plain HTML, CSS, and vanilla JavaScript.
 
-## Brand
+## Files
 
-- **Consumer brand:** JOVICK
-- **Product:** TABLE WATER
-- **Parent brand:** JOVICK UNIQUE
-- **Legal/business entity:** JOVICK UNIQUE INTEGRATED VENTURES LIMITED
-- **Tagline direction:** Pure Water. Pure Confidence.
-- **Primary colors:** Deep Blue, Water Blue, White, Dark Navy
+- `index.html` — homepage and content sections
+- `css/style.css` — visual design and responsive layouts
+- `js/main.js` — mobile navigation, active section highlighting, reveal effects, and footer year
+- `assets/jovick-mark.svg` — simple brand mark
 
-## Tech stack
+## Run locally
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS v4
-
-## Development
-
-```bash
-npm install
-npm run dev
-```
-
-## Production build
-
-```bash
-npm run build
-npm run preview
-```
+Open `index.html` in a browser, or use any static file server. No package installation or build step is required.
 
 ## Deployment
 
-Deployed through Netlify from the GitHub `main` branch.
+This is a static site. Publish the repository root as the site directory; no build command is required.
 
-## Important
+## Before going live
 
-Business phone numbers, email addresses, regulatory claims, certifications, treatment methods, pack sizes, pricing, and production details should be added only after they are verified.
+- Replace the sample photography with Jovick's own product and factory photos where available.
+- Confirm the official business email and contact details. The email button currently uses a sample address.
+- Add only verified product specifications, regulatory approvals, quality claims, and certifications.
+- Confirm all products and distribution options listed match what Jovick actually offers.
+
+Built with HTML, CSS, and vanilla JavaScript only.
