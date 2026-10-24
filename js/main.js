@@ -15,51 +15,73 @@
     toggle.addEventListener("click", () => {
       const isOpen = toggle.getAttribute("aria-expanded") === "true";
       toggle.setAttribute("aria-expanded", String(!isOpen));
-      toggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+      toggle.setAttribute(
+        "aria-label",
+        isOpen ? "Open navigation" : "Close navigation",
+      );
       nav.classList.toggle("is-open", !isOpen);
     });
-    navLinks.forEach(link => link.addEventListener("click", closeMenu));
-    document.addEventListener("keydown", event => {
+    navLinks.forEach((link) => link.addEventListener("click", closeMenu));
+    document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
         closeMenu();
         toggle.focus();
       }
     });
-    document.addEventListener("click", event => {
-      if (nav.classList.contains("is-open") && !nav.contains(event.target) && !toggle.contains(event.target)) closeMenu();
+    document.addEventListener("click", (event) => {
+      if (
+        nav.classList.contains("is-open") &&
+        !nav.contains(event.target) &&
+        !toggle.contains(event.target)
+      )
+        closeMenu();
     });
   }
 
   const year = document.querySelector("#current-year");
   if (year) year.textContent = new Date().getFullYear();
 
-  const revealTargets = document.querySelectorAll(".intro-grid, .section-heading, .product-card, .promise-grid, .audience-grid, .contact-panel");
-  revealTargets.forEach(element => element.classList.add("reveal"));
+  const revealTargets = document.querySelectorAll(
+    ".intro-grid, .section-heading, .product-card, .promise-grid, .audience-grid, .contact-panel",
+  );
+  revealTargets.forEach((element) => element.classList.add("reveal"));
 
-  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    revealTargets.forEach(element => observer.observe(element));
+  if (
+    "IntersectionObserver" in window &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 },
+    );
+    revealTargets.forEach((element) => observer.observe(element));
   } else {
-    revealTargets.forEach(element => element.classList.add("is-visible"));
+    revealTargets.forEach((element) => element.classList.add("is-visible"));
   }
 
   const sections = document.querySelectorAll("main section[id]");
   if ("IntersectionObserver" in window && sections.length) {
-    const sectionObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        document.querySelectorAll(".nav-link").forEach(link => {
-          link.classList.toggle("active", link.getAttribute("href") === "#" + entry.target.id);
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          document.querySelectorAll(".nav-link").forEach((link) => {
+            link.classList.toggle(
+              "active",
+              link.getAttribute("href") === "#" + entry.target.id,
+            );
+          });
         });
-      });
-    }, { rootMargin: "-25% 0px -65% 0px" });
-    sections.forEach(section => sectionObserver.observe(section));
+      },
+      { rootMargin: "-25% 0px -65% 0px" },
+    );
+    sections.forEach((section) => sectionObserver.observe(section));
   }
 })();
