@@ -1,27 +1,28 @@
 # Jovick Table Water
 
-A responsive static website for Jovick Table Water, built with plain HTML, CSS, and vanilla JavaScript.
+Static responsive multi-page website built with plain HTML, CSS and vanilla JavaScript. No package installation or build step is required.
 
-## Files
+## Pages
+- `index.html` — Homepage
+- `our-story.html` — Our Story
+- `our-products.html` — Our Products
+- `our-promise.html` — Our Promise
+- `contact.html` — Contact & Inquiries
 
-- `index.html` — homepage and content sections
-- `css/style.css` — visual design and responsive layouts
-- `js/main.js` — mobile navigation, active section highlighting, reveal effects, and footer year
-- `assets/jovick-mark.svg` — simple brand mark
+## CSS
+- `css/style.css` — shared layout, navigation, buttons, cards and responsive styles
+- `css/home.css`, `css/story.css`, `css/products.css`, `css/promise.css`, `css/contact.css` — page-specific styles
 
-## Run locally
+## JavaScript
+- `js/main.js` — shared mobile menu, active navigation and footer year
+- `js/home.js`, `js/story.js`, `js/products.js`, `js/promise.js`, `js/contact.js` — page-specific behavior
 
-Open `index.html` in a browser, or use any static file server. No package installation or build step is required.
+## Local testing
+Open `index.html` or use VS Code Live Server.
 
-## Deployment
-
-This is a static site. Publish the repository root as the site directory; no build command is required.
-
-## Before going live
-
-- Replace the sample photography with Jovick's own product and factory photos where available.
-- Confirm the official business email and contact details. The email button currently uses a sample address.
-- Add only verified product specifications, regulatory approvals, quality claims, and certifications.
-- Confirm all products and distribution options listed match what Jovick actually offers.
-
-Built with HTML, CSS, and vanilla JavaScript only.
+## Before publishing
+- Replace sample Unsplash photos with real Jovick product and facility photos.
+- Confirm the official inquiry email. `js/contact.js` currently uses `hello@jovicktablewater.com` as a placeholder.
+- The inquiry form opens a visitor's email app via `mailto:`; it does not send directly from the website.
+- Verify product sizes, prices, delivery areas, quality claims and certifications before publishing.
+- Deploy the repository root as a static site.
