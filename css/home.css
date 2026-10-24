@@ -1,1 +1,4 @@
 .hero{background:linear-gradient(120deg,#f7fbff,#e8f5ff)}.hero-copy{padding:15px 0}.hero-image img{object-position:center}.section.alt .content-grid{align-items:center}
+/* Home-page refinements */
+.hero-copy{padding:18px 0}.hero-image img{object-position:center 48%}.hero .eyebrow{margin-bottom:20px}.hero-actions{gap:18px}.section.alt .content-grid{align-items:center}
+@media(max-width:760px){.hero-copy{padding:0}.hero-actions{align-items:flex-start;gap:14px}}
