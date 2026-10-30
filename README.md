@@ -28,7 +28,7 @@ No build command is required.
 
 ## Inquiry form behavior
 
-The form in `contact.html` validates required fields in the browser and prepares an email using the visitor's configured email app. The recipient is `hello@jovicktablewater.com`. It uses a `mailto:` link, so it does **not** send messages directly from the website and depends on the visitor having an email app configured.
+The form in `contact.html` validates required fields in the browser and prepares an email using the visitor's configured email app. The recipient is `jovickuniqueenterprises@gmail.com`. The business phone is `0803 665 8159`; WhatsApp is `+234 813 729 7150`. It uses a `mailto:` link, so it does **not** send messages directly from the website and depends on the visitor having an email app configured.
 
 Product-page inquiry links preselect the matching inquiry type using the `topic` query parameter.
 
