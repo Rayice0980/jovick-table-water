@@ -1,1 +1,4 @@
-(()=>{"use strict";document.body.classList.add("story-page")})();
+(() => {
+  "use strict";
+  document.body.classList.add("story-page");
+})();

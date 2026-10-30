@@ -1,1 +1,6 @@
-.story-intro{max-width:720px}.story-values{background:var(--ice)}
+.story-intro {
+  max-width: 720px;
+}
+.story-values {
+  background: var(--ice);
+}

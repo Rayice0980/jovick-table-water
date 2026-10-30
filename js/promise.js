@@ -1,1 +1,4 @@
-(()=>{"use strict";document.body.classList.add("promise-page")})();
+(() => {
+  "use strict";
+  document.body.classList.add("promise-page");
+})();
