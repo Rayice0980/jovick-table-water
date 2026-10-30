@@ -1,4 +1,1 @@
-(() => {
-  "use strict";
-  document.body.classList.add("products-page");
-})();
+(()=>{"use strict";document.body.classList.add("products-page")})();
